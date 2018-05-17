@@ -1,4 +1,4 @@
-package pers.liujicheng.leetcode.easy;
+package pers.liujicheng.leetcode.easy.longestpalindrome;
 
 import java.util.HashMap;
 import java.util.Map;
