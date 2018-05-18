@@ -1,23 +1,15 @@
 package pers.liujicheng.leetcode.launch;
 
-
-import pers.liujicheng.leetcode.easy.FlippingAnImage.FlippingAnImage;
+import pers.liujicheng.leetcode.easy.niqueorseodeWords.UniqueMorseCodeWords;
 
 public class Launch {
     public static void main(String[] args) {
-        FlippingAnImage entry = new FlippingAnImage();
-        int[][] arr = {{1, 1, 0}, {1, 0, 1}, {0, 0, 0}};
-        int[][] result;
+        UniqueMorseCodeWords entry = new UniqueMorseCodeWords();
+        String[] arr = {"gin", "zen", "gig", "msg"};
         long start = System.currentTimeMillis();
-        result = entry.flipAndInvertImage(arr);
+        int result=entry.uniqueMorseRepresentations(arr);
         System.out.println(System.currentTimeMillis() - start);
-
-        for (int i = 0; i < result.length; i++) {
-            System.out.println("");
-            for (int j = 0; j < result[i].length; j++) {
-                System.out.print(result[i][j]);
-            }
-        }
+        System.out.println("result:"+result);
     }
 
 }

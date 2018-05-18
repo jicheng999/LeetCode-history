@@ -38,11 +38,10 @@ public class FlippingAnImage {
     public int[] flipHorizontally(int[] arr){
         int start=0;
         int end=arr.length-1;
-        int temp=0;
         while(start<=end){
-            temp=arr[start];
-            arr[start]=arr[end]^1;
-            arr[end]=temp^1;
+            arr[start]=arr[end]^arr[start];
+            arr[end]=arr[end]^arr[start];
+            arr[start]=arr[end]^arr[start];
             start++;
             end--;
         }
