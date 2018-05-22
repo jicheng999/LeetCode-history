@@ -1,4 +1,4 @@
-package pers.liujicheng.leetcode.easy.FlippingAnImage;
+package pers.liujicheng.leetcode.easy.flippinganImage;
 
 /**
  * Created by JC on 2018/5/17.
