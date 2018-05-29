@@ -1,4 +1,4 @@
-package pers.liujicheng.leetcode.medium.longestsubstringwithoutrepeatingcharacters.repeateddnasequences;
+package pers.liujicheng.leetcode.medium.repeateddnasequences;
 
 import java.util.*;
 

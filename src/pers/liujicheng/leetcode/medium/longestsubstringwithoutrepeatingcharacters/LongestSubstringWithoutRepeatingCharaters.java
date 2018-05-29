@@ -42,6 +42,28 @@ public class LongestSubstringWithoutRepeatingCharaters {
         return maxLength;
     }
 
+    public int lengthOfLongestSubstring3(String s) {
+
+
+        int left = 0;
+        int right = 0;
+        char chars[] = s.toCharArray();
+
+        boolean frequency[] = new boolean[256];
+
+        int result = 0;
+
+        while(right < s.length()){
+            frequency[chars[right++]] = true;
+            result = Math.max(right - left, result);
+
+            while(right < s.length() && frequency[chars[right]])
+                frequency[chars[left++]] = false;
+        }
+
+        return result;
+    }
+
     public int lengthOfLongestSubstring2(String s) {
         if (null == s || "".equals(s)) {
             return 0;
@@ -87,7 +109,7 @@ public class LongestSubstringWithoutRepeatingCharaters {
         char ch = (char) chIndex;
         int lastIndex = -1;
         int startIndex=0;
-        char[][] charArr = new char[2000][];
+        char[][] charArr = new char[1000][];
         int subCount = 0;
         for (int i = 0; i < s.length(); i++) {
             if (s.charAt(i) == ch) {
@@ -153,10 +175,10 @@ public class LongestSubstringWithoutRepeatingCharaters {
 
     public static void main(String[] args) {
         LongestSubstringWithoutRepeatingCharaters obj = new LongestSubstringWithoutRepeatingCharaters();
-        String content= FileUtils.readFileAsString("E:/testcontent.txt");
-        //String content = "aab";
+       // String content= FileUtils.getFileContentAsString("E:/testcontent.txt");
+        String content = "pwwkew";
         long start = System.currentTimeMillis();
-        int maxLength = obj.lengthOfLongestSubstring2(content);
+        int maxLength = obj.lengthOfLongestSubstring3(content);
         System.out.println(maxLength);
         long end = System.currentTimeMillis() - start;
         System.out.println("spend time:" + end);
