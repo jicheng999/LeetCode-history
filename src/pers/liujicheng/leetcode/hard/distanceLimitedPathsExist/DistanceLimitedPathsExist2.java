@@ -45,8 +45,8 @@ public class DistanceLimitedPathsExist2 {
 		}
 
 		// 排序
-		edgeList = sortList(edgeList);
-		queries = sortList(queries);
+		Arrays.sort(edgeList, Comparator.comparingInt(o -> o[2]));
+		Arrays.sort(queries, Comparator.comparingInt(o -> o[2]));
 
 		// 游标
 		int edgeIdx = 0;
